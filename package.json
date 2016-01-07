@@ -1,0 +1,31 @@
+{
+  "name": "ci-publish",
+  "version": "1.0.0",
+  "description": "Poor man's semantic release utility. Let the CI do the `npm publish` step after the build passes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "simple-commit-message"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/ci-publish.git"
+  },
+  "keywords": [
+    "ci",
+    "publish",
+    "npm",
+    "utility",
+    "build",
+    "automatic"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/ci-publish/issues"
+  },
+  "homepage": "https://github.com/bahmutov/ci-publish#readme",
+  "devDependencies": {
+    "simple-commit-message": "2.0.0"
+  }
+}
