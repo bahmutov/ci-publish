@@ -1,6 +1,8 @@
 # ci-publish
 > Poor man's semantic release utility. Let the CI do the `npm publish` step after the build passes
 
+[![Build status][ci-publish-ci-image] ][ci-publish-ci-url]
+
 ## How to use
 
 - Add as a dependency to your project `npm install --save-dev ci-publish`
@@ -74,7 +76,7 @@ License: MIT - do anything with the code, but don't blame me if it does not work
 Spread the word: tweet, star on github, etc.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/obind/issues) on Github
+[open issue](https://github.com/bahmutov/ci-publish/issues) on Github
 
 ## MIT License
 
@@ -100,3 +102,6 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+[ci-publish-ci-image]: https://travis-ci.org/bahmutov/ci-publish.png?branch=master
+[ci-publish-ci-url]: https://travis-ci.org/bahmutov/ci-publish
