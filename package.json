@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Poor man's semantic release utility. Let the CI do the `npm publish` step after the build passes",
   "main": "index.js",
+  "bin": {
+    "ci-publish": "bin/ci-publish.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "simple-commit-message"
+    "commit": "simple-commit-message",
+    "lint": "standard bin/*.js",
+    "ci-publish": "node bin/ci-publish.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +31,11 @@
   },
   "homepage": "https://github.com/bahmutov/ci-publish#readme",
   "devDependencies": {
-    "simple-commit-message": "2.0.0"
+    "simple-commit-message": "2.0.0",
+    "standard": "5.4.1"
+  },
+  "dependencies": {
+    "npm-utils": "1.3.3",
+    "user-home": "2.0.0"
   }
 }
