@@ -1,6 +1,8 @@
 # ci-publish
 > Poor man's semantic release utility. Let the CI do the `npm publish` step after the build passes
 
+[![NPM][ci-publish-icon] ][ci-publish-url]
+
 [![Build status][ci-publish-ci-image] ][ci-publish-ci-url]
 
 ## Goal
@@ -168,5 +170,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
+[ci-publish-icon]: https://nodei.co/npm/ci-publish.png?downloads=true
+[ci-publish-url]: https://npmjs.org/package/ci-publish
 [ci-publish-ci-image]: https://travis-ci.org/bahmutov/ci-publish.png?branch=master
 [ci-publish-ci-url]: https://travis-ci.org/bahmutov/ci-publish
