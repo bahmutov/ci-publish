@@ -7,6 +7,16 @@
 
 Allow any CI to publish your module after tests pass, using your account to login.
 
+Q: Why not use [semantic-release](https://github.com/semantic-release/semantic-release)?
+
+A: Because it needs a lot of tweaking to setup on 
+[CircleCI](https://glebbahmutov.com/blog/how-to-setup-semantic-release-on-circle-ci/) or 
+[Gitlab](https://github.com/semantic-release/semantic-release/pull/77)
+
+Q: But your package only does the "release" part without the "semantic" version upgrade?
+
+A: Yeah :( I am sorry
+
 Example: this own repo, see [.travis.yml](.travis.yml) file
 
 ## How to use
@@ -49,7 +59,12 @@ Create a script command to run the publish, in your `package.json`
 
 Now you can run the `ci-publish` logic from shell using `npm run ci-publish` command
 
-- Add a command to run on your CI after the tests pass. For example, on Travis CI
+- Add a command to run on your CI after the tests pass. 
+
+### Travis CI
+
+Add `after_success` section to your `.travis.yml` file
+
 
 ```yaml
 after_success:
@@ -66,6 +81,34 @@ Then we run the `npm publish` command using standard NPM tool.
 If the package has a new version, it will be published. If you have not
 incremented the version number, this step fail, 
 but we do not fail the build step by using `|| true`
+
+**warning:** The publish will fail if there are multiple Travis jobs trying to publish at the same
+time, which happens if you test on multiple NodeJS versions. Maybe use a different CI engine for
+the publish?
+
+### Gitlab
+
+Add a new `deploy` job to your `.gitlab-ci.yml` file. For example
+
+```yaml
+before_script:
+  - npm install
+stages:
+  - test
+  - deploy
+npm_test:
+  stage: test
+  script:
+    - npm test
+release:
+  stage: deploy
+  script:
+    - echo Running release
+    - npm run ci-publish || true
+    - npm publish || true
+```
+
+Gitlab can run multiple test jobs in parallel and then a single release job.
 
 ## Typical output
 
