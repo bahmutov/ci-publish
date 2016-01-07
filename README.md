@@ -3,6 +3,10 @@
 
 [![Build status][ci-publish-ci-image] ][ci-publish-ci-url]
 
+## Goal
+
+Allow any CI to publish your module after tests pass, using your account to login.
+
 ## How to use
 
 - Add as a dependency to your project `npm install --save-dev ci-publish`

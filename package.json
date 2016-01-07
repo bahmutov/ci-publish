@@ -7,7 +7,7 @@
     "ci-publish": "bin/ci-publish.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint",
     "commit": "simple-commit-message",
     "lint": "standard bin/*.js",
     "ci-publish": "node bin/ci-publish.js"
