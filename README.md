@@ -15,8 +15,10 @@ Example: this own repo, see [.travis.yml](.travis.yml) file
 
 - Login into your project's NPM registry
 
-    npm login --registry <registry url>
-    npm login --registry http://registry.npmjs.org
+```
+npm login --registry <registry url>
+npm login --registry http://registry.npmjs.org
+```
 
 - Copy the token
 
