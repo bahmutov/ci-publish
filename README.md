@@ -7,6 +7,8 @@
 
 Allow any CI to publish your module after tests pass, using your account to login.
 
+Example: this own repo, see [.travis.yml](.travis.yml) file
+
 ## How to use
 
 - Add as a dependency to your project `npm install --save-dev ci-publish`
@@ -47,9 +49,11 @@ Now you can run the `ci-publish` logic from shell using `npm run ci-publish` com
 
 - Add a command to run on your CI after the tests pass. For example, on Travis CI
 
-    after_success:
-        - npm run ci-publish || true
-        - npm publish || true
+```yaml
+after_success:
+    - npm run ci-publish || true
+    - npm publish || true
+```
 
 Every time you want to publish your module to the registry after the tests pass, 
 just increment the package version and push the code. The CI will pass the tests and will
@@ -60,6 +64,18 @@ Then we run the `npm publish` command using standard NPM tool.
 If the package has a new version, it will be published. If you have not
 incremented the version number, this step fail, 
 but we do not fail the build step by using `|| true`
+
+## Typical output
+
+For example, when successfully publishing this module, Travis produced this output
+
+    $ npm run ci-publish || true
+    > ci-publish@1.0.0 ci-publish /home/travis/build/bahmutov/ci-publish
+    > node bin/ci-publish.js
+    //registry.npmjs.org/:_authToken=${NPM_TOKEN}
+    saved /home/travis/.npmrc
+    $ npm publish || true
+    * ci-publish@1.0.0
 
 ## Extra resources
 
