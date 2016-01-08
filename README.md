@@ -71,15 +71,12 @@ Add `after_success` section to your `.travis.yml` file
 ```yaml
 after_success:
     - npm run ci-publish || true
-    - npm publish || true
 ```
 
 Every time you want to publish your module to the registry after the tests pass, 
 just increment the package version and push the code. The CI will pass the tests and will
 try to run `ci-publish`. This will add the auth token to the CI's "user" profile,
 allowing it to publish under your authority. 
-
-Then we run the `npm publish` command using standard NPM tool.
 If the package has a new version, it will be published. If you have not
 incremented the version number, this step fail, 
 but we do not fail the build step by using `|| true`
@@ -107,7 +104,6 @@ release:
   script:
     - echo Running release
     - npm run ci-publish || true
-    - npm publish || true
 ```
 
 Gitlab can run multiple test jobs in parallel and then a single release job.
