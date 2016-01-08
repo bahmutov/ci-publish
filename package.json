@@ -35,7 +35,6 @@
     "standard": "5.4.1"
   },
   "dependencies": {
-    "npm-utils": "1.4.1",
-    "user-home": "2.0.0"
+    "npm-utils": "1.4.2"
   }
 }
