@@ -9,7 +9,7 @@
   "scripts": {
     "test": "npm run lint",
     "commit": "simple-commit-message",
-    "lint": "standard bin/*.js",
+    "lint": "standard bin/*.js src/*.js",
     "ci-publish": "node bin/ci-publish.js"
   },
   "repository": {
@@ -35,6 +35,8 @@
     "standard": "5.4.1"
   },
   "dependencies": {
+    "available-versions": "0.7.1",
+    "changed-log": "0.10.2",
     "npm-utils": "1.4.2"
   }
 }
