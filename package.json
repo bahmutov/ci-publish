@@ -10,7 +10,8 @@
     "test": "npm run lint",
     "commit": "simple-commit-message",
     "lint": "standard bin/*.js src/*.js",
-    "ci-publish": "node bin/ci-publish.js"
+    "ci-publish": "node bin/ci-publish.js",
+    "ban": "ban"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   },
   "homepage": "https://github.com/bahmutov/ci-publish#readme",
   "devDependencies": {
+    "ban-sensitive-files": "1.8.1",
     "simple-commit-message": "2.0.0",
     "standard": "5.4.1"
   },

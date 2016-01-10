@@ -9,6 +9,10 @@ node_js:
   - '4'
 before_script:
   - npm prune
+script:
+  - npm run ban -- --all
+  - npm run lint
+  - npm test
 after_success:
   - npm run ci-publish || true
 branches:
