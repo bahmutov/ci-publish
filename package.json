@@ -6,12 +6,17 @@
   "bin": {
     "ci-publish": "bin/ci-publish.js"
   },
+  "files": [
+    "bin",
+    "src"
+  ],
   "scripts": {
     "test": "npm run lint",
     "commit": "simple-commit-message",
     "lint": "standard bin/*.js src/*.js",
     "ci-publish": "node bin/ci-publish.js",
-    "ban": "node --harmony node_modules/.bin/ban"
+    "ban": "node --harmony node_modules/.bin/ban",
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
   },
   "repository": {
     "type": "git",
