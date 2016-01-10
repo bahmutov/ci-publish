@@ -11,7 +11,7 @@
     "commit": "simple-commit-message",
     "lint": "standard bin/*.js src/*.js",
     "ci-publish": "node bin/ci-publish.js",
-    "ban": "ban"
+    "ban": "node --harmony node_modules/.bin/ban"
   },
   "repository": {
     "type": "git",
