@@ -33,6 +33,7 @@
   "homepage": "https://github.com/bahmutov/ci-publish#readme",
   "devDependencies": {
     "ban-sensitive-files": "1.8.1",
+    "pre-git": "3.3.0",
     "simple-commit-message": "2.0.0",
     "standard": "5.4.1"
   },
@@ -40,5 +41,19 @@
     "available-versions": "0.7.1",
     "changed-log": "0.10.2",
     "npm-utils": "1.4.2"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": [],
+      "pre-commit": [
+        "npm run ban",
+        "npm test"
+      ],
+      "pre-push": [
+        "npm run size"
+      ],
+      "post-commit": [],
+      "post-merge": []
+    }
   }
 }
