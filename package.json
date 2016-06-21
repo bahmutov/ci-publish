@@ -37,15 +37,15 @@
   },
   "homepage": "https://github.com/bahmutov/ci-publish#readme",
   "devDependencies": {
-    "ban-sensitive-files": "1.8.1",
-    "pre-git": "3.3.0",
-    "simple-commit-message": "2.0.0",
-    "standard": "5.4.1"
+    "ban-sensitive-files": "1.8.3",
+    "pre-git": "3.9.1",
+    "simple-commit-message": "2.1.1",
+    "standard": "7.1.2"
   },
   "dependencies": {
-    "available-versions": "0.7.1",
+    "available-versions": "0.8.2",
     "changed-log": "0.10.2",
-    "npm-utils": "1.4.2"
+    "npm-utils": "1.5.2"
   },
   "config": {
     "pre-git": {
