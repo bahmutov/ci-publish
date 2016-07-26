@@ -61,6 +61,9 @@ Create a script command to run the publish, in your `package.json`
 
 Now you can run the `ci-publish` logic from shell using `npm run ci-publish` command
 
+You can avoid adding a script command if you use explicit command in your CI files,
+like `$(npm bin)/ci-publish`
+
 - Add a command to run on your CI after the tests pass. 
 
 ### Travis CI
@@ -166,7 +169,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[ci-publish-icon]: https://nodei.co/npm/ci-publish.png?downloads=true
+[ci-publish-icon]: https://nodei.co/npm/ci-publish.svg?downloads=true
 [ci-publish-url]: https://npmjs.org/package/ci-publish
-[ci-publish-ci-image]: https://travis-ci.org/bahmutov/ci-publish.png?branch=master
+[ci-publish-ci-image]: https://travis-ci.org/bahmutov/ci-publish.svg?branch=master
 [ci-publish-ci-url]: https://travis-ci.org/bahmutov/ci-publish
