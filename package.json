@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "available-versions": "0.8.2",
-    "changed-log": "0.10.2",
+    "changed-log": "0.11.0",
     "npm-utils": "1.7.1"
   },
   "config": {
