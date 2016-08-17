@@ -11,8 +11,8 @@ Allow any CI to publish your module after tests pass, using your account to logi
 
 Q: Why not use [semantic-release](https://github.com/semantic-release/semantic-release)?
 
-A: Because it needs a lot of tweaking to setup on 
-[CircleCI](https://glebbahmutov.com/blog/how-to-setup-semantic-release-on-circle-ci/) or 
+A: Because it needs a lot of tweaking to setup on
+[CircleCI](https://glebbahmutov.com/blog/how-to-setup-semantic-release-on-circle-ci/) or
 [Gitlab](https://github.com/semantic-release/semantic-release/pull/77)
 
 Q: But your package only does the "release" part without the "semantic" version upgrade?
@@ -38,8 +38,8 @@ The login step added a line to your `~/.npmrc` file looking something like this
 
     //registry.npmjs.org/:_authToken=00000000-0000-0000-0000-000000000000
 
-Grab the auth token value `00000000-0000-0000-0000-000000000000` (older NPM proxies or 
-registries like [sinopia](https://www.npmjs.com/package/sinopia) might have an older 
+Grab the auth token value `00000000-0000-0000-0000-000000000000` (older NPM proxies or
+registries like [sinopia](https://www.npmjs.com/package/sinopia) might have an older
 different token string format)
 
 - Set the token as CI environment variable
@@ -64,7 +64,7 @@ Now you can run the `ci-publish` logic from shell using `npm run ci-publish` com
 You can avoid adding a script command if you use explicit command in your CI files,
 like `$(npm bin)/ci-publish`
 
-- Add a command to run on your CI after the tests pass. 
+- Add a command to run on your CI after the tests pass.
 
 ### Travis CI
 
@@ -76,12 +76,12 @@ after_success:
     - npm run ci-publish || true
 ```
 
-Every time you want to publish your module to the registry after the tests pass, 
+Every time you want to publish your module to the registry after the tests pass,
 just increment the package version and push the code. The CI will pass the tests and will
 try to run `ci-publish`. This will add the auth token to the CI's "user" profile,
-allowing it to publish under your authority. 
+allowing it to publish under your authority.
 If the package has a new version, it will be published. If you have not
-incremented the version number, this step fail, 
+incremented the version number, this step fail,
 but we do not fail the build step by using `|| true`
 
 **warning:** The publish will fail if there are multiple Travis jobs trying to publish at the same
@@ -128,6 +128,12 @@ For example, when successfully publishing this module, Travis produced this outp
 * [Deploying with npm private modules][deploying post]
 
 [deploying post]: http://blog.npmjs.org/post/118393368555/deploying-with-npm-private-modules
+
+* If you need to debug NPM commands, just enable verbose NPM logging
+
+```sh
+npm_config_loglevel=verbose $(npm bin)/ci-publish
+```
 
 ### Small print
 
