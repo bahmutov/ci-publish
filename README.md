@@ -125,6 +125,8 @@ For example, when successfully publishing this module, Travis produced this outp
 
 ## Extra resources
 
+* [Increment package version on demand using semantic commits](https://github.com/bahmutov/next-ver)
+
 * [Deploying with npm private modules][deploying post]
 
 [deploying post]: http://blog.npmjs.org/post/118393368555/deploying-with-npm-private-modules
