@@ -43,7 +43,7 @@
     "standard": "8.0.0-beta.3"
   },
   "dependencies": {
-    "available-versions": "0.10.0",
+    "available-versions": "0.13.2",
     "changed-log": "0.11.0",
     "npm-utils": "1.7.1"
   },
