@@ -1,6 +1,6 @@
 {
   "name": "ci-publish",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Poor man's semantic release utility. Let the CI do the `npm publish` step after the build passes",
   "main": "index.js",
   "bin": {
@@ -16,7 +16,8 @@
     "lint": "standard bin/*.js src/*.js",
     "ci-publish": "node bin/ci-publish.js",
     "ban": "node --harmony node_modules/.bin/ban",
-    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "next-version": "next-ver --go"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
   "homepage": "https://github.com/bahmutov/ci-publish#readme",
   "devDependencies": {
     "ban-sensitive-files": "1.8.3",
+    "next-ver": "1.8.0",
     "pre-git": "3.10.0",
     "simple-commit-message": "2.1.1",
     "standard": "8.0.0-beta.3"
